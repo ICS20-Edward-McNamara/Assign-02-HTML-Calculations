@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-    <!-- Include JS files -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Area with JavaScript" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Edward Mcnamara" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav1_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav1_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav1_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav1_index/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title> Taxation, with JavaScript</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js">		</script>
     <script src="./js/script.js"></script>
-</head>
-  
-<body>
-    <div class="container">
-        <h1>BMI Calculator</h1>
-  
-        <!-- Option for providing height 
-            and weight to the user-->
-        <p>Height (in cm)</p>
-  
-        <input type="text" id="height">
-  
-        <p>Weight (in kg)</p>
-  
-        <input type="text" id="weight">
-  
-        <button id="button" onclick="calculate()">Calculate</button>
-  
-        <div id="bmi"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"> Congratulations! you're being taxed by the Government!</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <h3>Please enter your employment information for our salary program</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Height (Cm)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height"
+            />
+            <label class="mdl-textfield__label" for="height">Height ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+				
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Weight (Kg)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="weight"
+            />
+            <label class="mdl-textfield__label" for="weight">base ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+				
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <p>
+            <div id="bmi"></div>
+          </div>
+        </p>
+      </main>
     </div>
-</body>
-  
+  </body>
 </html>

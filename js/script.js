@@ -6,7 +6,7 @@
 
 'use strict'
 /**
- * This function calculates tax based on your hours worked and hourly salary
+ * This function calculates your bmi based on your height in cm and weight in kg
  */
 function calculate () {
   // input
@@ -17,21 +17,24 @@ function calculate () {
   const CONVERSION_RATE = 0.01
   let heightConverted = height * CONVERSION_RATE
   let bmi = weight / heightConverted **2
+  let result;
 
 
-   // //Dividing as per the bmi conditions
-   //       if (bmi < 18.6) result.innerHTML =
-   //          `Under Weight : <span>${bmi}</span>`;
+   //Dividing as per the bmi conditions
+  if (bmi < 18.6)
+    result = "<br>You're Underweight!";
   
-   //       else if (bmi >= 18.6 && bmi < 24.9) 
-   //      result.innerHTML = 
-   //              `Normal : <span>${bmi}</span>`;
+  else if (bmi >= 18.6 && bmi < 24.9)
+     result = "<br> You're Normal Weight!!";
   
-   //       else result.innerHTML =
-   //        `Over Weight : <span>${bmi}</span>`;
-   //   }
+  else if (24.9 < bmi)
+    result = "<br>You're Overweight!!!";
+  else
+    result = "<br>Invalid Answers"
+
+
 
   // output
-  document.getElementById('bmi').innerHTML = 'Your BMI is ' + bmi.toFixed(2)
+  document.getElementById('bmi').innerHTML = 'Your BMI is ' + bmi.toFixed(2) + result
   
 }

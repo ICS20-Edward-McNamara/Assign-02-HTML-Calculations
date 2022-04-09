@@ -28,9 +28,9 @@ function calculate () {
      result = "<br> You're Normal Weight!!";
   
   else if (24.9 < bmi)
-    result = "<br>You're Overweight!!!";
+    result = "<br> You're Overweight!!!";
   else
-    result = "<br>Invalid Answers"
+    result = "<br> Invalid Answers"
 
 
 

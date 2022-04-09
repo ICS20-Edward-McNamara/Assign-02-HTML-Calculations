@@ -2,7 +2,7 @@ body {
 	background-color: #8eadec;
 }
 
-h1 {
+h3 {
 	background-color: rgb(61, 255, 242);
 	color: hsl(35, 87%, 56%);
 	padding: 40px;
@@ -10,5 +10,13 @@ h1 {
 }
 
 p {
-	color: #00ffbf;
+	color: #802000;
+}
+
+img {
+  padding: 40px;
+}
+
+div {
+  text-align: center;
 }

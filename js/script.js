@@ -9,11 +9,11 @@
  * This function calculates your bmi based on your height in cm and weight in kg
  */
 function calculate () {
-  // input
+  // Entering height and weight
   let height = parseFloat(document.getElementById('height').value)
   let weight = parseFloat(document.getElementById('weight').value) 
 
-  // process
+  // Calculating with bmi formula 
   const CONVERSION_RATE = 0.01
   let heightConverted = height * CONVERSION_RATE
   let bmi = weight / heightConverted **2
@@ -34,7 +34,7 @@ function calculate () {
 
 
 
-  // output
+  // Displaying results 
   document.getElementById('bmi').innerHTML = 'Your BMI is ' + bmi.toFixed(2) + result
   
 }
